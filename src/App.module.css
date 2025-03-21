@@ -1,0 +1,14 @@
+.page{
+    display: grid;
+    grid-template-rows: 12.5rem 1fr;
+}
+
+.header {
+    background-color: var(--gray-700);
+    display: grid;
+    place-items: center;
+}
+
+.main {
+
+}
