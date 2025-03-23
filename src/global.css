@@ -24,3 +24,7 @@
 body {
     background-color: var(--gray-600);
 }
+
+body, input, button {
+    font-family: 'Inter', sans-serif;
+}
