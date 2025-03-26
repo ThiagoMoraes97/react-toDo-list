@@ -1,0 +1,73 @@
+.task{
+    display: flex;
+    align-items: start;
+    gap: 1.3rem;
+    width: 43.75rem;
+    padding: 1rem;
+    background-color: var(--gray-500);
+    border-radius: 8px;
+    border: 1px solid var(--gray-400);
+    position: relative;
+}
+
+.task .input-wrapper{
+   position: relative;
+}
+
+.task input{
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.task label{
+    display: grid;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    width: 17.455px;
+    height: 17.455px;
+    background: transparent;
+    position: absolute;
+    place-items: center;
+    top: 1.1rem; 
+}
+
+
+.task:has(input:hover) label{
+    background-color: rgba(30, 111, 159, 0.2);
+    border: 2px solid var(--blue);
+}
+
+.task:has(input:checked) label {
+    background-color: var(--purple-dark);
+    border: none;
+    color: var(--gray-100);
+}
+
+.task:has(input:checked:hover) label{
+    background-color: var(--purple);
+    border: none;
+}
+
+.task:has(input:checked) p{
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
+
+.task p {
+    flex: 1;
+    font-size: .875rem;
+    line-height: 1.4;
+    color: var(--gray-100);
+}
+
+.task button{
+    border: none;
+    background-color: transparent;
+    color: var(--gray-300);
+    cursor: pointer;
+}
+
+.task button:hover{
+    color: var(--danger);
+}
