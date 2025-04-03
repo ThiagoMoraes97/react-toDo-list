@@ -65,7 +65,7 @@ export function App() {
   return (
     <div className={styles.page}>
       <header className={styles.header}> 
-        <img src="/public/rocketLogo.svg" alt="Logo" />
+        <img src="./rocketLogo.svg" alt="Logo" />
       </header>
 
       <main className={styles.main}>
@@ -90,7 +90,7 @@ export function App() {
             { totalTasksNumber > 0 ? 
               tasks.map(task => <Task key={task.content} content={task.content} onDelete={deleteTask} onCompleted={changeCompletedTasks} isCompleted={task.isCompleted}/>) : 
               <div className={styles.noRegisteredTasks}>
-                <img src="/clipboard.png" alt="Clipboard" />
+                <img src="./clipboard.png" alt="Clipboard" />
                 <strong>Você ainda não tem tarefas cadastradas</strong>
                 <p>Crie tarefas e organize seus itens a fazer</p>
               </div> 
