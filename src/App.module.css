@@ -1,6 +1,7 @@
 .page{
     display: grid;
     grid-template-rows: 12.5rem 1fr;
+    
 }
 
 .header {
@@ -108,4 +109,53 @@
 
 .tasks .tasksList .noRegisteredTasks img {
     margin-bottom: 1rem;
+}
+
+
+@media (max-width: 425px) {
+
+    .main {
+        padding-inline: 2rem;
+    }
+
+    .form {
+        flex-direction: column;
+        
+    }
+
+    .form input, .form input::placeholder {
+        font-size: 1.3rem;
+    }
+
+    .form button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .form button > svg {
+        width: 1.2rem;   
+        height: 1.2rem;
+    }
+
+    .tasks .tasksHeader .tasksCreated, .tasks .tasksHeader .tasksCompleted {
+        font-size: 1.3rem;
+    }
+
+    .tasks .tasksHeader .tasksCreated span, .tasks .tasksHeader .tasksCompleted span{
+        font-size: 1.1rem;
+        padding: 0.2rem 0.8rem;
+    }
+
+    .tasks .tasksList .noRegisteredTasks{
+        font-size: 1.4rem;
+    }
+
+    .tasks .tasksList .noRegisteredTasks img{
+        height: 5rem;
+        width: 5rem;
+    }
+
+
 }

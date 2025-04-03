@@ -71,3 +71,26 @@
 .task button:hover{
     color: var(--danger);
 }
+
+@media (max-width: 425px) {
+
+    .task {
+        width: 100%;
+        gap: 1.8rem;
+    }
+
+    .task label{
+        width: 25px;
+        height: 25px;
+    }
+
+    .task p {
+        font-size: 1.3rem;
+    }
+
+    .task button > svg{
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+
+}
