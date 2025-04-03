@@ -1,25 +1,34 @@
 import styles from './Task.module.css'
 import { TbTrash } from "react-icons/tb";
 import { FaCheck } from "react-icons/fa6";
-import { useState } from 'react';
 
-export function Task() {
-  const [isChecked, setIsChecked] = useState(false);
+interface TaskProps {
+  content: string;
+  onDelete: (taskToDelete: string) => void;
+  onCompleted: (taskCompleted: string) => void;
+  isCompleted: boolean;
+}
 
+export function Task({content, onDelete, onCompleted, isCompleted}: TaskProps) {
   function handleCheckboxChange() {
-    setIsChecked((prevChecked) => !prevChecked);
+    onCompleted(content);
   }
+
+  function handleDeleteTask() {
+    onDelete(content);
+  }
+
 
   return (
     <div className={styles.task}>
       <div className="input-wrapper">
         <label htmlFor="taskIsCompleted">
-          {isChecked && <FaCheck size={10}/>}
+          {isCompleted && <FaCheck size={10}/>}
         </label>
-        <input type="checkbox" name="taskIsCompleted" onClick={handleCheckboxChange}/>
+        <input type="checkbox" name="taskIsCompleted" onClick={handleCheckboxChange} checked={isCompleted}/>
       </div>
-      <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-      <button>
+      <p>{content}</p>
+      <button onClick={handleDeleteTask}>
         <TbTrash size={18} />
       </button>
     </div>
